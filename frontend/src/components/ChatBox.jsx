@@ -129,14 +129,14 @@ const ChatBox = () => {
         JSON.stringify(checkedMessages)
       );
       const eventSource = new EventSource(
-        `http://localhost:4000/api/groups/generate?messages=${encodedMessages}`
+        `/api/groups/generate?messages=${encodedMessages}`
       );
 
-      console.log(
-        "ENCODED MSG and JSON STRINGIFY CHECKED MSG:",
-        encodedMessages,
-        JSON.stringify(checkedMessages)
-      );
+      // console.log(
+      //   "ENCODED MSG and JSON STRINGIFY CHECKED MSG:",
+      //   encodedMessages,
+      //   JSON.stringify(checkedMessages)
+      // );
 
       eventSource.onmessage = (event) => {
         setResponse((prev) => prev + event.data);
