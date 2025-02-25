@@ -53,7 +53,7 @@ const ChatHeader = ({
   
     try {
       const { data } = await axios.post(
-        `http://localhost:4000/api/groups/${selectedGroup._id}/addMembers`,
+        `/api/groups/${selectedGroup._id}/addMembers`,
         {
           userIds: addUsers.map(user => user._id),
         },

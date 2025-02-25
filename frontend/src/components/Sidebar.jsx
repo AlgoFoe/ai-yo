@@ -52,7 +52,7 @@ const Sidebar = () => {
   const handleDeleteGroupId = async () => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:4000/api/groups/${selectedGroupId}`,
+        `/api/groups/${selectedGroupId}`,
       );
 
       console.log("Group deleted:", data);
@@ -69,7 +69,7 @@ const Sidebar = () => {
   const handleCreateGroup = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/groups",
+        "/api/groups",
         {
           name: groupName,
           members: selectedUserIds,
