@@ -258,7 +258,7 @@ const ChatBox = () => {
                     </label>
                   </div>
                 )}
-                <div className="chat-bubble flex flex-col">
+                <div className="chat-bubble flex flex-col max-w-80">
                   {message.image && (
                     <img
                       src={message.image}
