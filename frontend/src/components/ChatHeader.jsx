@@ -121,7 +121,7 @@ const ChatHeader = ({
               disabled={checkedMessages.length < 2}
               className="btn w-12 p-0 btn-warning "
             >
-              <Flame />
+              {checkedMessages.length >= 2 ? <img src="animated_flame.gif" alt="flame" className="w-10 h-10 -translate-y-1.5" /> : <Flame />}
             </button>
           )}
           {selectedGroup && (
